@@ -1,0 +1,67 @@
+<view class="top">
+  <!-- 轮播图区域 -->
+  <view class="swipers">
+    <swiper indicator-dots="true" indicator-active-color='white' autoplay='true' interval='2000' circular='true'>
+      <swiper-item wx:for="{{listDetail.src}}" wx:key="index">
+        <image src="{{item}}" bindtap="skanimage" data-src="{{item}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 商品信息 -->
+  <view class="goodsInfo">
+    <view class="info">
+      <view class="przieNumber">
+        <view class="prize">￥{{listDetail.prize}}</view>
+        <view class="saleNumber">已售 {{listDetail.numberSale}}</view>
+      </view>
+      <view class="nameShar">
+        <view class="name">{{listDetail.name}}</view>
+        <button class="buttonshar" 	open-type='share'>
+          <view class="share">
+          <van-icon name="share-o" size="30px" />
+          <view style="color: #7f7f7f;">分享</view>
+        </view>
+        </button>
+      </view>
+      <view class="numberK">库存 {{listDetail.number}}</view>
+    </view>
+  </view>
+</view>
+<!-- 推荐商品 -->
+<view class="ingoods">
+  <view style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+    <view style="font-weight: bold;font-size: 12pt;">本店推荐</view>
+    <view style="color: #7f7f7f;font-size: 9pt;" bindtap="goTbarKind">全部商品></view>
+  </view>
+  <view class="inlist">
+    <view class="itemList" wx:for="{{goodsList}}" bindtap="goDetail" data-id="{{item._id}}" wx:key="index">
+      <image src="{{item.src[0]}}"></image>
+      <view style="font-size: 25rpx;margin: 8rpx 0rpx;"> {{item.name}}</view>
+      <view style="color: red;">￥{{item.prize}}</view>
+    </view>
+  </view>
+</view>
+
+<!-- 用户评价 -->
+<view class="pinglist">
+  <view style="font-weight: bold;text-align: center;">用户评价</view>
+  <view class="pingItem" wx:for="{{10}}">
+    <view class="message">
+     
+      <image src="https://s1.ax1x.com/2022/07/16/j5KjUK.jpg"></image>
+      <view class="nick" style="margin-left: 20rpx;">黑子哥</view>
+    </view>
+    <view class="content">真是太美味了</view>
+  </view>
+</view>
+
+<!-- 底部导航 -->
+<van-goods-action>
+ 
+    <van-goods-action-icon icon="chat-o" text="客服" dot />
+
+  <van-goods-action-icon icon="cart-o" text="购物车" info="5" />
+  <van-goods-action-icon icon="shop-o" text="店铺"  />
+  <van-goods-action-button text="加入购物车" bindtap="addCar" type="warning" />
+  <van-goods-action-button bindtap="gobuy" text="立即购买" />
+</van-goods-action>

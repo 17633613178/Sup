@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "kind-left":"../../components/kind-left/index",
+    "kind-rigth":"../../components/kind-rigth/index"
+  },
+  "navigationBarTitleText": "分类"
+}

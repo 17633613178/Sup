@@ -1,0 +1,72 @@
+.list{
+  margin-bottom: 120rpx;
+}
+.numberInfo image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.left image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.center image{
+  width: 240rpx;
+  height: 240rpx;
+  border-radius: 20rpx;
+}
+.item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 20rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+.rigth{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.numberInfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10rpx;
+
+  border-radius: 10rpx;
+}
+.bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.name{
+  margin-bottom: 30rpx;
+  font-size: 26rpx;
+}
+.prize{
+  color: red;
+  margin-right: 30rpx;
+}
+.number{
+  margin: 0rpx 10rpx;
+}
+.botomCose image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.botomCose{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bottomAll{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

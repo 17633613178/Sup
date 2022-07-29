@@ -1,0 +1,14 @@
+
+  <view class="kinds">
+    <kind-left goodsKind='{{goodsKind}}' bind:on-change="changeLeft" current="{{currents}}"></kind-left>
+    <kind-rigth bind:on-change="changeRigth" bind:go-detail="goDeail" swiper='{{swiper}}' goodsList='{{goodsList}}' goodsKind='{{goodsKind}}' current='{{current}}'></kind-rigth>
+  </view>
+
+  <view class="bottomAll">
+    <van-submit-bar price="{{ 3050 }}" button-text="提交订单" bind:submit="onClickButton" tip="{{ true }}">
+      <view class="botomCose">
+        共6件商品>
+      </view>
+
+    </van-submit-bar>
+  </view>

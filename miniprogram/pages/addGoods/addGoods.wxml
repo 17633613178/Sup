@@ -1,0 +1,47 @@
+<form action="" bindsubmit="submit">
+  <view class="all-content">
+    <view class="top">
+      <view class="name">
+      <input type="text"  name='name' value="{{list.name}}" placeholder="从这里输入商品名称与关键字" />
+    </view>
+    <view class="img">
+      <view class="img-all">
+        <view class="img-list" wx:for="{{src}}" wx:key="index">
+        <image src="{{item}}"></image>
+      </view>
+      </view>
+      <view class="icon" bindtap="upimage">+</view>
+    </view>
+    </view>
+    <view class="kind">
+      <picker range='{{kind}}' bindchange='changekind'>
+        <van-cell title="类型" name='' size='large'  is-link value="{{kind[index_kind]}}" />
+      </picker>
+      <picker range='{{kindIndex}}' bindchange='changeindex'>
+        <van-cell title="首页类型" size='large'  is-link value="{{kindIndex[index]}}" />
+      </picker>
+
+    </view>
+    <view class="number">
+      <van-cell-group>
+
+
+        <van-field value="{{ list.prize }}" name='prize' type='digit' label="价格" placeholder="请输入商品价格" />
+        <van-field value="{{ list.number }}" name='number' type='digit' label="库存" placeholder="请输入商品库存" />
+
+
+
+
+      </van-cell-group>
+    </view>
+    <view class="description">
+      <view class="word">商品描述</view>
+     
+      <textarea placeholder="请输入商品描述(300)字以内 " value="{{list.description}}" maxlength='300' name="description"cols="30" rows="10"></textarea>
+    </view>
+    <view style="margin-top: 220rpx;">
+      <van-button color='red ' wx:if="{{!upGoods}}" size="large" form-type='submit' round>上架售卖</van-button>
+      <van-button color='red ' wx:if="{{upGoods}}" size="large" form-type='submit' round>保存</van-button>
+    </view>
+  </view>
+</form>

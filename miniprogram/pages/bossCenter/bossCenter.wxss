@@ -1,0 +1,122 @@
+Page {
+  background-color: #DCDCDC;
+}
+
+.top {
+  background-color: #FF4500;
+  height: 380rpx;
+
+
+}
+
+.top image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.top-item {
+  display: flex;
+  flex-direction: row;
+  margin-top: 150rpx;
+  align-items: center;
+  margin-left: 30rpx;
+}
+
+.online {
+  margin-left: 30rpx;
+  color: white;
+}
+
+.wait {
+  background-color: white;
+  margin: 20rpx 20rpx;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  margin-top: 40rpx;
+}
+
+.wait-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wait-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50rpx;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wait-word {
+  margin-top: 20rpx;
+  font-size: 10pt;
+  color: #7f7f7f;
+}
+
+.wait-number {
+  font-size: 15pt;
+}
+
+.tishi {
+  font-size: 10pt;
+  margin-bottom: 10rpx;
+}
+
+.my-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.my-top image {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 59%;
+  margin-top: 220rpx;
+}
+
+.my-top view {
+  margin-top: 20rpx;
+}
+
+#web {
+  color: red;
+}
+
+#web:hover {
+  color: blue;
+}
+
+text::first-line {
+  color: white;
+}
+.main{
+ width: 300rpx;
+ height: 300rpx;
+
+}
+.main{
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: blue;
+ }
+ .box{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: red;
+  position: relative;
+  left:150px;
+  top: 150px;
+ }
+

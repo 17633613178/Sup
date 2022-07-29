@@ -1,0 +1,1 @@
+"E:\小程序开发者工具\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-2gt2x3j976c15ebd --n quickstartFunctions --r --project "E:\b站代码出售\Supermarket" --report_first --report

@@ -1,0 +1,103 @@
+<van-tabbar active="{{ active }}" bind:change="onChange">
+    <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+
+    <van-tabbar-item icon="friends-o">我的</van-tabbar-item>
+
+</van-tabbar>
+
+<block wx:if="{{active==0}}">
+    <view class="top">
+        <view class="top-item">
+            <view>
+                <image src="https://s1.ax1x.com/2022/07/22/jOP3d0.jpg"></image>
+            </view>
+            <view class="online">
+                <view style="font-weight: bold;">疫情超市</view>
+                <view bindtap="goIndex">进店></view>
+            </view>
+        </view>
+    </view>
+    <view class="wait">
+        <view class="wait-top">
+            <view style="font-weight: bold;font-size: 12pt;">待处理</view>
+            <view style="color: #7f7f7f;font-size: 10pt;">订单管理></view>
+        </view>
+        <view class="wait-item">
+            <view class="item">
+                <view class="wait-number">{{waitDeal.waitPay}}</view>
+                <view class="wait-word">待付款></view>
+            </view>
+            <view class="item">
+                <view class="wait-number">{{waitDeal.waitOut}}</view>
+                <view class="wait-word">待出货></view>
+            </view>
+            <view class="item">
+                <view class="wait-number">{{waitDeal.waitIn}}</view>
+                <view class="wait-word">待取货></view>
+            </view>
+        </view>
+    </view>
+
+    <view class="wait">
+        <view class="wait-top">
+            <view style="display: flex;flex-direction: row;align-items: center;">
+                <view style="font-weight: bold;font-size: 12pt;">今日数据</view>
+                <view style="color: #7f7f7f;font-size: 10pt;margin-left: 20rpx;">7/22 12:05</view>
+            </view>
+            <view style="color: #7f7f7f;font-size: 10pt;">></view>
+        </view>
+        <view class="wait-item">
+            <view class="item">
+                <view class="tishi">支付金额</view>
+                <view class="wait-number">{{todayDig.money}}</view>
+                <view class="wait-word">昨日 ￥{{Yesterday.money}}</view>
+            </view>
+            <view class="item">
+                <view class="tishi">订单数</view>
+                <view class="wait-number">{{todayDig.order}}</view>
+                <view class="wait-word">昨日 {{Yesterday.order}}</view>
+            </view>
+
+        </view>
+    </view>
+
+    <view class="wait">
+        <view class="wait-top">
+            <view style="font-weight: bold;font-size: 12pt;">我的商品</view>
+            <view style="color: #7f7f7f;font-size: 10pt;">></view>
+        </view>
+        <view class="wait-item">
+            <view class="item" bindtap="goMoods" data-active="0">
+                <view class="wait-number">{{saleGoods.length}}</view>
+                <view class="wait-word">销售中></view>
+            </view>
+            <view class="item" bindtap="goMoods" data-active="1">
+                <view class="wait-number">{{xiaGoods.length}}</view>
+                <view class="wait-word">待上架></view>
+            </view>
+            <view class="item" bindtap="addGoods" data-index="1">
+                <van-icon name="add-o" color='red' size='60rpx' />
+                <view class="wait-word">新增商品></view>
+            </view>
+        </view>
+    </view>
+</block>
+
+<block wx:if="{{active==1}}">
+    <view class="my-top">
+        <image src="https://s1.ax1x.com/2022/07/22/jOP3d0.jpg"></image>
+        <view>疫情超市</view>
+    </view>
+    <view style="margin-top: 180rpx;">
+        <van-cell title="总收入" icon="balance-o" size='large' is-link value="￥{{boss.all_money}}" />
+
+        <van-cell title="总订单" icon="balance-o" size='large' is-link value="{{boss.all_order}}" />
+
+
+        <view style="margin-top: 120rpx;">
+            <van-button type="primary" wx:if="{{!allowDeng}}" color='red' size="large" bindtap="allowDeng" round>订单通知</van-button>
+
+        </view>
+
+    </view>
+</block>

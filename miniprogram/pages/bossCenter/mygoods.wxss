@@ -1,0 +1,111 @@
+page {
+  background-color: #DDDDDD;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list .item {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 0 10px 10px;
+  padding: 20rpx;
+  border-radius: 20rpx;
+
+}
+
+.item-id {
+  color: #7f7f7f;
+  font-size: 28rpx;
+}
+
+.message-left {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+}
+
+.item-message {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20rpx 0;
+ 
+}
+
+.item-image image {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+}
+
+.item-message .message-left,
+.price {
+  display: 1;
+}
+
+.item-online {
+  margin-left: 80rpx;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.item-number {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  color: #7f7f7f;
+  font-size: 25rpx;
+  align-self: center;
+  justify-self: center;
+}
+
+.price {
+  color: red;
+  font-size: 13pt;
+  align-self: center;
+  font-weight: bold;
+  margin-right: 30rpx;
+}
+
+.name {
+  align-self: center;
+  font-size: 28rpx;
+}
+
+.item-Operation {
+  display: flex;
+  flex-direction: row;
+  margin-left: 40%;
+  justify-content: flex-end;
+  justify-content: space-around;
+  color: white;
+  font-size: 24rpx;
+
+}
+
+.share {
+  background-color: #5599FF;
+  padding: 12rpx 22rpx;
+  border-radius: 10rpx;
+}
+
+.xiajia {
+  background-color: 	red;
+  padding: 12rpx 22rpx;
+  border-radius: 10rpx;
+}
+
+.bianji {
+  background-color: #4400CC;
+  padding: 12rpx 22rpx;
+  border-radius: 10rpx;
+}

@@ -1,0 +1,64 @@
+<van-tabs active="{{ active }}" bind:change="onChange" animated swipeable>
+  <van-tab title="销售中({{saleGoods.length}})">
+    <view class="list">
+      <view class="item" wx:for="{{saleGoods}}" wx:key="index">
+        <view class="item-id">商品编号:{{item._id}}</view>
+        <view class="item-message">
+          <view class="message-left">
+            <view class="item-image">
+              <image src="{{item.src[0]}}"></image>
+            </view>
+            <view class="item-online">
+              <view class="name">{{item.name}}</view>
+              <view class="item-number">
+                <view class="number">库存:{{item.number}}</view>
+                <view class="numberSale">销量:{{item.numberSale}}</view>
+              </view>
+            </view>
+          </view>
+          <view class="price">￥{{item.prize}}</view>
+        </view>
+        <view class="item-Operation">
+          <view class="share" >分享</view>
+          <view class="xiajia" bindtap="xiajia" data-index="{{index}}">下架</view>
+          <view class="bianji"  bindtap="addGoods" data-id="{{item._id}}">编辑</view>
+        </view>
+      </view>
+    </view>
+
+  </van-tab>
+  <van-tab title="待上架({{xiaGoods.length}})">
+    <view wx:if="{{!xiaGoods.length}}" style="display: flex;flex-direction: column;align-items: center;margin-top: 350rpx;">
+      <image style="width: 120rpx;height: 120rpx;" src="/images/buyend.png"></image>
+      <view style="font-size: 10pt;color: #7f7f7f;">暂无待上架商品</view>
+    </view>
+
+    <view class="list">
+      <view class="item" wx:for="{{xiaGoods}}" wx:key="index">
+        <view class="item-id">商品编号:{{item._id}}</view>
+        <view class="item-message">
+          <view class="message-left">
+            <view class="item-image">
+              <image src="{{item.src[0]}}"></image>
+            </view>
+            <view class="item-online">
+              <view class="name">{{item.name}}</view>
+              <view class="item-number">
+                <view class="number">库存:{{item.number}}</view>
+                <view class="numberSale">销量:{{item.numberSale}}</view>
+              </view>
+            </view>
+          </view>
+          <view class="price">￥{{item.prize}}</view>
+        </view>
+        <view class="item-Operation">
+          <view class="share">分享</view>
+          <view class="xiajia" bindtap="shangjia" data-index="{{index}}">上架</view>
+          <view class="bianji"  bindtap="addGoods" data-id="{{item._id}}">编辑</view>
+        </view>
+      </view>
+    </view>
+
+  </van-tab>
+
+</van-tabs>

@@ -1,0 +1,133 @@
+<view>
+    <van-search bind:change="onChange" bind:search="search" bind:search="onSearch" bindconfirm="search" type="text" shape="round" show-action error="true" shape="round" placeholder="输入搜索关键词" />
+
+</view>
+<!-- 轮播图区域 -->
+<view class="swipers" wx:if="{{!lookserch}}">
+    <swiper indicator-dots="true" indicator-active-color='white' autoplay='true' interval='2000' circular='true'>
+        <swiper-item wx:for="{{swiper}}" wx:key="index">
+            <image src="{{item.src}}" bindtap="goDetail" data-id="{{item.id}}"></image>
+        </swiper-item>
+    </swiper>
+</view>
+
+<!-- 分类界面 -->
+<van-tabs active="{{ active }}" bind:change="onChange" animated swipeable wx:if="{{!lookserch}}">
+
+    <van-tab title="休闲百货">
+        <!-- 采用grid和flex布局样式 -->
+        <view class="all_goods">
+            <view class="item_goods" wx:for="{{goodsList}}" wx:key="index" wx:if="{{item.kindIndex=='休闲百货'}}">
+
+                <view class="ev_goods" bindtap="goDetail" data-id="{{item._id}}">
+                    <image class="goods_image" src="{{item.src[0]}}"></image>
+                    <view class="name">{{item.name}}</view>
+
+                </view>
+                <view class="bottom">
+                    <view class="prize">￥{{item.prize}}</view>
+                    <image class="shopcarimage" src="/images/shopcar.png"></image>
+                </view>
+
+            </view>
+        </view>
+
+
+    </van-tab>
+
+
+    <van-tab title="烟酒调料">
+        <view class="all_goods">
+            <view class="item_goods" wx:for="{{goodsList}}" wx:key="index" wx:if="{{item.kindIndex=='烟酒调料'}}">
+
+                <view class="ev_goods" bindtap="goDetail" data-id="{{item._id}}">
+                    <image class="goods_image" src="{{item.src[0]}}"></image>
+                    <view class="name">{{item.name}}</view>
+
+                </view>
+                <view class="bottom">
+                    <view class="prize">￥{{item.prize}}</view>
+                    <image class="shopcarimage" src="/images/shopcar.png"></image>
+                </view>
+
+            </view>
+        </view>
+
+    </van-tab>
+    <van-tab title="洗漱日化">
+
+        <view class="all_goods">
+            <view class="item_goods" wx:for="{{goodsList}}" wx:key="index" wx:if="{{item.kindIndex=='洗漱日化'}}">
+
+                <view class="ev_goods" bindtap="goDetail" data-id="{{item._id}}">
+                    <image class="goods_image" src="{{item.src[0]}}"></image>
+                    <view class="name">{{item.name}}</view>
+
+                </view>
+                <view class="bottom">
+                    <view class="prize">￥{{item.prize}}</view>
+                    <image class="shopcarimage" src="/images/shopcar.png"></image>
+                </view>
+
+            </view>
+        </view>
+
+    </van-tab>
+    <van-tab title="生鲜水果">
+
+        <view class="all_goods">
+            <view class="item_goods" wx:for="{{goodsList}}" wx:key="index" wx:if="{{item.kindIndex=='生鲜水果'}}">
+
+                <view class="ev_goods" bindtap="goDetail" data-id="{{item._id}}">
+                    <image class="goods_image" src="{{item.src[0]}}"></image>
+                    <view class="name">{{item.name}}</view>
+
+                </view>
+                <view class="bottom">
+                    <view class="prize">￥{{item.prize}}</view>
+                    <image class="shopcarimage" src="/images/shopcar.png"></image>
+                </view>
+
+            </view>
+        </view>
+
+    </van-tab>
+    <van-tab title="学习用品">
+
+
+        <view class="all_goods">
+            <view class="item_goods" wx:for="{{goodsList}}" wx:key="index" wx:if="{{item.kindIndex=='学习用品'}}">
+
+                <view class="ev_goods" bindtap="goDetail" data-id="{{item._id}}">
+                    <image class="goods_image" src="{{item.src[0]}}"></image>
+                    <view class="name">{{item.name}}</view>
+
+                </view>
+                <view class="bottom">
+                    <view class="prize">￥{{item.prize}}</view>
+                    <image class="shopcarimage" src="/images/shopcar.png"></image>
+                </view>
+
+            </view>
+        </view>
+    </van-tab>
+</van-tabs>
+
+<!-- 搜索结果显示 -->
+<block wx:if="{{lookserch}}">
+    <view class="all_goods">
+        <view class="item_goods" wx:for="{{listsearch}}" wx:if="{{item.onSales}}" wx:key="index" >
+
+            <view class="ev_goods" bindtap="goDetail" data-id="{{item._id}}">
+                <image class="goods_image" src="{{item.src[0]}}"></image>
+                <view class="name">{{item.name}}</view>
+
+            </view>
+            <view class="bottom">
+                <view class="prize">￥{{item.prize}}</view>
+                <image class="shopcarimage" src="/images/shopcar.png"></image>
+            </view>
+
+        </view>
+    </view>
+</block>

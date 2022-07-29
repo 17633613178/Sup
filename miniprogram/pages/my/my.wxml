@@ -1,0 +1,74 @@
+<view class="top">
+  <image class="topimage" src='cloud://cloud1-2gt2x3j976c15ebd.636c-cloud1-2gt2x3j976c15ebd-1309707474/friends.images/微信图片_20220721235537.jpg'></image>
+  <view class="user">
+    <image src="{{user.avatarUrl}}"></image>
+    <view>Hi! {{user.nickName}}</view>
+  </view>
+</view>
+<view class="order">
+  <view class="word">
+    <view style="font-weight: bold;font-size: 13pt;">我的订单</view>
+    <view style="color: #7f7f7f;">全部订单></view>
+  </view>
+  <view class="icon">
+    <view class="items">
+
+      <van-icon class="itemsimage" size="45px" info='1' name="/images/waitPay.png" />
+      <view class="itemWord">待付款</view>
+    </view>
+    <view class="items">
+
+      <van-icon class="itemsimage" size="45px" info='2' name="/images/waitSale.png" />
+      <view class="itemWord">待出货</view>
+    </view>
+    <view class="items">
+
+      <van-icon class="itemsimage" size="45px" info='3' name="/images/waitGet.png" />
+
+      <view class="itemWord">待取货</view>
+    </view>
+    <view class="items">
+
+      <van-icon class="itemsimage" size="45px" info='4' name="/images/waitPing.png" />
+
+      <view class="itemWord">待评价</view>
+    </view>
+    <view class="items">
+
+      <van-icon class="itemsimage" size="45px" info='5' name="/images/buyend.png" />
+
+      <view class="itemWord">已完成</view>
+    </view>
+  </view>
+</view>
+
+<view class="userMess">
+  <van-cell title="个人信息" url="/pages/myUser/myUser" icon="manager-o" size='large' is-link value="" />
+  <van-cell title="积分"  icon="balance-o" size='large' is-link value="{{number}}" />
+</view>
+
+
+<view class="userMess">
+  <van-cell bindtap="showPopup" title="商家地址" icon="location-o" size='large' is-link />
+  <van-cell bindtap="callphone" title="商家电话" icon="phone-o" size='large' is-link />
+  <van-cell  title="商家后台" url='/pages/bossCenter/bossCenter' icon="manager-o" size='large' is-link />
+</view>
+<van-button type="primary" open-type='contact'  color='#5599FF' size="large"  round>在线客服</van-button>
+
+<view style="margin-top: 30rpx;">
+  <van-button type="primary" wx:if="{{!allowDeng}}" color='#9955FF' size="large" bindtap="allowDeng" round>授权登录</van-button>
+
+</view>
+<van-popup show="{{ show }}" position="bottom" custom-style="height: 40%;" closeable round close-icon="close" bind:close="onClose">
+  <view class="lacation" bindtap="gomap">
+    <van-icon class="itemsimage" size="20px" name="location-o" />
+    <view class="lacationitem">云南省曲靖市罗平县九龙大道</view>
+
+  </view>
+  <image class="lacationimage" bindtap="skansrc" src="{{locationsrc}}"></image>
+</van-popup>
+
+
+<view class="cancle" wx:if="{{allowDeng}}">
+  <view bindtap="cancleDeng">退出</view>
+</view>

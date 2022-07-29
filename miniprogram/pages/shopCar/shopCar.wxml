@@ -1,0 +1,43 @@
+<view class="list">
+    <view class="item" wx:for="{{goodsList}}" wx:key="index" bindlongtap="delete" data-index="{{index}}">
+        <view class="left">
+            <image bindtap="choose" data-index="{{index}}" wx:if="{{item.conditionCar}}" src="/images/choose.png"></image>
+            <image bindtap="choose" data-index="{{index}}"  wx:if="{{!item.conditionCar}}" src="/images/nochoose.png"></image>
+        </view>
+        <view class="center" bindtap="goDetail" data-id="{{item._id}}">
+            <image src="{{item.src}}"></image>
+        </view>
+        <view class="rigth">
+            <view class="top">
+                <view class="name">{{item.name}}</view>
+            </view>
+            <view class="bottom">
+                <view>
+                    <view class="prize">￥{{item.prize}}</view>
+                </view>
+                <view class="numberInfo">
+                    <image src="/images/jian.png" bindtap="jianNumber" data-index="{{index}}"></image>
+                    <view class="number">{{item.number}}</view>
+                    <image src="/images/add.png" bindtap="addNumber" data-index="{{index}}"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view wx:if="{{!goodsList.length}}" style="display: flex;flex-direction: column;align-items: center;margin-top: 350rpx;">
+    <image style="width: 80rpx;height: 80rpx;" src="/images/car2.png"></image>
+    <view style="clear: both;color: #7f7f7f;font-size: 9pt;margin-top: 10rpx;">亲！赶快添加你喜欢的东西吧！！！</view>
+
+</view>
+
+<view class="bottomAll">
+    <van-submit-bar price="{{ allMoney*100 }}" button-text="提交订单" bind:submit="onClickButton" tip="{{ true }}">
+        <view class="botomCose" bindtap="allChoose" >
+            <image wx:if="{{allChoose}}"  src="/images/choose.png"></image>
+            <image wx:if="{{!allChoose}}" src="/images/nochoose.png"></image>
+            <view style="margin-top: 10rpx;font-size: 9pt;">全选</view>
+        </view>
+
+    </van-submit-bar>
+</view>

@@ -1,0 +1,14 @@
+<form bindsubmit="submit">
+  <van-cell-group>
+
+    <van-field value="{{ user.nickName }}" label="微信昵称" disabled='true' />
+    <van-field value="{{ user.name }}" name='name' label="姓名" placeholder="请输入用户名" />
+    <van-field value="{{ user.phone }}" name='phone' label="联系电话" placeholder="请输入联系电话" />
+
+
+    <view style="margin-top: 220rpx;">
+      <van-button  color='#9955FF' size="large" form-type='submit' round>保存</van-button>
+    </view>
+
+  </van-cell-group>
+</form>

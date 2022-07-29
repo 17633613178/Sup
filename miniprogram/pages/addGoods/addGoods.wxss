@@ -1,0 +1,75 @@
+page {
+  background-color: #DDDDDD;
+}
+
+.all-content {
+  margin: 0rpx 20rpx;
+
+
+
+}
+
+.top {
+  background-color: white;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  margin: 20rpx 0;
+}
+
+.name {
+  margin: 10rpx 0;
+  font-size: 14pt;
+}
+
+.img-list image {
+  width: 200rpx;
+  height: 220rpx;
+  margin-left: 5rpx;
+  margin-top: 5rpx;
+
+
+}
+
+.img-all {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.icon {
+  width: 200rpx;
+  height: 220rpx;
+  background-color: #DDDDDD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30pt;
+
+}
+
+.kind {
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  background-color: white;
+  padding: 20rpx;
+
+}
+
+.number {
+  border-radius: 20rpx;
+  margin: 20rpx 0;
+  background-color: white;
+  padding: 20rpx;
+}
+.description{
+  background-color: white;
+  padding: 20rpx;
+  border-radius: 20rpx;
+}
+.word{
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+textarea{
+  width: 100%;
+}

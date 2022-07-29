@@ -1,0 +1,16 @@
+.kinds{
+  display: grid;
+  grid-template-columns: 160rpx 1fr;
+  gap: 20rpx;
+  margin-right: 10rpx;
+  
+}
+.botomCose image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.botomCose{
+   font-size: 10pt;
+   font-weight: bold;
+}
+

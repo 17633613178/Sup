@@ -1,0 +1,92 @@
+.topimage {
+  width: 100%;
+  position: absolute;
+  height: 450rpx;
+}
+
+.user image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+
+}
+
+.user view {
+  font-weight: bold;
+  color: #6A5ACD;
+  margin-left: 20rpx;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  top: 200rpx;
+  left: 30rpx;
+}
+
+.order {
+
+  margin: 380rpx 10rpx 30rpx;
+  background-color: white;
+  padding: 20rpx;
+  border-radius: 30rpx;
+}
+
+.word {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 30rpx;
+
+}
+.itemWord{
+  font-size: 9pt;
+  margin-top: 8rpx;
+  color: 	#6495ED;
+}
+
+.userMess{
+  margin-bottom: 20rpx;
+}
+.cancle{
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  bottom: 10rpx;
+  color: #7f7f7f;
+
+}
+.lacation{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+  align-items: center;
+  margin-left: 30rpx;
+  
+}
+.lacationitem{
+  color: red;
+  align-self: flex-end;
+  margin-left: 10rpx;
+}
+.lacationimage{
+  width: 100%;
+  margin-top: 20rpx;
+  border-radius: 30rpx;
+}

@@ -1,0 +1,9 @@
+<scroll-view scroll-y="true" class="kind-left">
+  <view class="left-item  {{current==index?'choose':''}} {{goodsKind.length==index?'bottomLast':''}}" wx:for="{{goodsKind}}" wx:key="index" bindtap="changeleft" data-index="{{index}}">
+    <image class="images" src="{{item.src}}"></image>
+    <view class="itemName">{{item.name}}</view>
+    <view class="left-line" wx:if="{{current==index}}"></view>
+  </view>
+
+
+</scroll-view>

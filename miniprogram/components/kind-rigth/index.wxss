@@ -1,0 +1,58 @@
+.goods-list{
+  height: 100vh;
+  width: 100%;
+}
+swiper{
+  margin-bottom: 20rpx;
+}
+.goods-image{
+  border-radius: 20rpx;
+  width: 220rpx;
+  height: 220rpx;
+}
+.section-name{
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-bottom: 26rpx;
+  height: 50rpx;
+  width: 100%;
+  background-color: white;
+  padding: 10rpx;
+}
+.section-list .item{
+  margin-bottom: 48rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  padding: 18rpx;
+  border-radius: 20rpx;
+}
+.name{
+  font-size: 28rpx;
+  font-weight: 500;
+}
+.description{
+  color: #7f7f7f;
+  font-size: 22rpx;
+}
+.number{
+  color: #7f7f7f;
+  font-size: 22rpx;
+}
+.prize{
+  color: red;
+  margin-top: 60rpx;
+}
+.add-jian-icon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.add-jian-icon{
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+.info{
+  flex-grow: 1;
+  margin-left: 18rpx;
+}

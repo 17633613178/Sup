@@ -1,0 +1,37 @@
+<scroll-view class="goods-list" scroll-y="true" scroll-into-view="choose-{{current}}" bindscroll="bindscroll">
+  <!-- 轮播图区域 -->
+  <swiper indicator-dots="true" indicator-active-color='white' autoplay='true' interval='2000' circular='true'>
+    <swiper-item wx:for="{{swiper}}" wx:key="index">
+      <image bindtap="goDetail" data-id="{{item.id}}" style="border-end-start-radius: 20rpx;" mode="aspectFill" src="{{item.src}}"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 商品区域 -->
+  <view class="list">
+    <view class="section" wx:for="{{goodsKind}}" wx:key="index" wx:for-item='itemKind' id="choose-{{index}}">
+      <view class="section-name">
+        {{itemKind.name}}
+      </view>
+      <view class="section-list" wx:for="{{goodsList}}" wx:key="idex">
+        <view class="item" wx:if="{{item.kind==itemKind.name}}">
+     
+            <image class="goods-image" src="{{item.src[0]}}" bindtap="goDetail" data-id="{{item._id}}"></image>
+            <view class="info" bindtap="goDetail" data-id="{{item._id}}">
+              <view class="name">{{item.name}}</view>
+              <view class="number">库存{{item.number}}</view>
+              <view class="description">{{item.description}}</view>
+              <view class="prize">￥{{item.prize}}</view>
+      
+          </view>
+          <view class="add-jian-icon">
+            <image style="width: 50rpx;height:50rpx;" src="/images/jian.png"></image>
+            <view>
+              <view>0</view>
+            </view>
+            <image style="width: 50rpx;height:50rpx;" src="/images/add.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

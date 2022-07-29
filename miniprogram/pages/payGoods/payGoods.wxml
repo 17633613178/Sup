@@ -1,0 +1,52 @@
+<view class="lacation">
+    <view>
+        <van-icon class="itemsimage" size="30px" name="location-o" />
+
+    </view>
+    <view class="lacation-item">
+        <text class="lacationitem" bindtap="callphone">\n联系电话:10086</text>
+        <text class="lacationitem" bindtap="gomap">\n商家地址>\n云南省曲靖市罗平县九龙大道</text>
+    </view>
+</view>
+
+<!-- 商品信息 -->
+<view class="list">
+    <view class="item  {{list.length==index+1?'choose':''}}" wx:for="{{list}}" wx:key="index">
+        <view class="item-left">
+            <view>
+                <image class="item-image" src="{{item.src}}"></image>
+            </view>
+
+            <view class="item-name">{{item.name}}</view>
+        </view>
+        <view class="item-prize-number">
+
+            <view class="prize">￥{{item.prize}}</view>
+            <view class="number">X{{item.number}}</view>
+
+        </view>
+
+    </view>
+    <view class="all-money">
+        <view style="color: #7f7f7f;">订单总金额</view>
+        <view style="color: red;">￥{{allMoney}}</view>
+    </view>
+</view>
+<!-- 备注信息 -->
+<view class="content">
+    <van-cell-group>
+
+        <van-field value="{{ user.nickName }}" label="备注信息" placeholder="选填，建议先和商家沟通后再填写" />
+
+    </van-cell-group>
+</view>
+
+<view class="submit">
+    <view style="display: flex;flex-direction: row;align-items: center;">
+        <view>共{{list.length}}件,合计</view>
+        <view style="font-size: 15pt;color: #FF4500;margin-left: 30rpx;">￥{{allMoney}}</view>
+    </view>
+    <view>
+        <view class="submit-word">下单</view>
+    </view>
+</view>
